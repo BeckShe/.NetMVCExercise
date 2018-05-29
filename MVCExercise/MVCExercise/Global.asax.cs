@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVCExercise.Route;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,7 +13,7 @@ namespace MVCExercise
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            //RouteTable.Routes.Add("default", new Route { Url = "{controller}/{action}" });
+            RouteTable.Routes.Add("default", new Route { Url = "{controller}/{action}" });
 
             //ControllerBuilder.Current.SetControllerFactory{ new DefaultControllerFactory()};
         }

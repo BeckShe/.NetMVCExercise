@@ -13,16 +13,27 @@ namespace MVCExercise.Route
         public Route()
         {
             this.DataTokens = new Dictionary<string, object>();
-            this.RouteHandler = new MVCRouteHandler();
+            this.RouteHandler = new MvcRouteHandler();
         }
 
         public override RouteData GetRouteData(HttpContextBase httpContext)
         {
             IDictionary<string, object> variables;
-            if (this.Match)
+            if (this.Match(httpContext.Request.AppRelativeCurrentExecutionFilePath.Substring(2),out variables))
             {
-
+                RouteData routeData = new RouteData();
+                foreach (var item in variables)
+                {
+                    routeData.Values.Add(item.Key, item.Value);
+                }
+                foreach (var item in DataTokens)
+                {
+                    routeData.DataTokens.Add(item.Key, item.Value);
+                }
+                routeData.RouteHandler = this.RouteHandler;
+                return routeData;
             }
+            return null;
         }
         protected bool Match(string requestUrl,out IDictionary<string,object> variables)
         {
