@@ -1,4 +1,6 @@
-﻿using MVCExercise.Route;
+﻿using MVCExercise.Interface;
+using MVCExercise.Route;
+using MVCExercise.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +28,7 @@ namespace MVCExercise.Handler
             string controllerName = this.RequestContext.RouteData.Controller;
             IControllerFactory controllerFactory = ControllerBuilder.Current.GetControllerFactory();
             IController controller = controllerFactory.CreateController(this.RequestContext, controllerName);
-            controller.Execte(this.RequestContext);
+            controller.Execute(this.RequestContext);
 
         }
     }

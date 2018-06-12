@@ -1,4 +1,5 @@
-﻿using MVCExercise.Route;
+﻿using MVCExercise.Core;
+using MVCExercise.Route;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +14,8 @@ namespace MVCExercise
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            RouteTable.Routes.Add("default", new Route { Url = "{controller}/{action}" });
-
-            //ControllerBuilder.Current.SetControllerFactory{ new DefaultControllerFactory()};
+            //RouteTable.Routes.Add("default", new Route { Url = "{controller}/{action}" });
+            ControllerBuilder.Current.SetControllerFactory(new DefaultControllerFactory());
         }
 
         protected void Session_Start(object sender, EventArgs e)
