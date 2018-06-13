@@ -80,6 +80,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\ActionExecutor.cs" />
     <Compile Include="Core\ActionResult.cs" />
     <Compile Include="Core\ControllerActionInvoker.cs" />
     <Compile Include="Core\ControllerBase.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="Core\ControllerBuilder.cs" />
     <Compile Include="Core\ControllerContext.cs" />
     <Compile Include="Core\DefaultControllerFactory.cs" />
+    <Compile Include="Core\DefaultModelBinder.cs" />
     <Compile Include="Handler\MvcHandler.cs" />
     <Compile Include="Handler\MvcRouteHandler.cs" />
     <Compile Include="Core\RawContentResult.cs" />
@@ -96,6 +98,7 @@
     <Compile Include="Interface\IActionInvoker.cs" />
     <Compile Include="Interface\IController.cs" />
     <Compile Include="Interface\IControllerFactory.cs" />
+    <Compile Include="Interface\IModelBinder.cs" />
     <Compile Include="Model\SimpleModel.cs" />
     <Compile Include="Model\UrlRoutingModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

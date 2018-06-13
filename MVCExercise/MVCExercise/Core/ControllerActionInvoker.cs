@@ -2,20 +2,28 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 
 namespace MVCExercise.Core
 {
     public class ControllerActionInvoker : IActionInvoker
     {
+        public IModelBinder ModelBinder { get; private set; }
         public ControllerActionInvoker()
         {
-
+            this.ModelBinder = new DefaultModelBinder();
         }
 
-        public void InvokeAction(ControllerContext controllerContext, string acitonName)
+        public void InvokeAction(ControllerContext controllerContext, string actionName)
         {
-            throw new NotImplementedException();
+            MethodInfo methodInfo = controllerContext.Controller.GetType().GetMethods().First(m => string.Compare(actionName, m.Name, true) == 0);
+            List<object> parameters = new List<object>();
+            foreach (ParameterInfo parameter in methodInfo.GetParameters())
+            {
+                parameters.Add(this.ModelBinder.BindModel(controllerContext, parameter.Name, parameter.ParameterType));
+            }
+            
         }
     }
 }
