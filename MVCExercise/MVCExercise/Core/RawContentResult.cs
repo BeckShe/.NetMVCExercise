@@ -1,15 +1,21 @@
 ﻿using System;
 using System.IO;
+using MVCExercise.Core;
 
 namespace MVCExercise.Controller
 {
-    internal class RawContentResult : ActionResult
+    public class RawContentResult : ActionResult
     {
-        private Action<TextWriter> callback;
-
+        public Action<TextWriter> callback { get; private set; }
+        
         public RawContentResult(Action<TextWriter> callback)
         {
             this.callback = callback;
+        }
+
+        public override void ExecuteResult(ControllerContext context)
+        {
+            this.callback(context.RequestContext.HttpContext.Response.Output);
         }
     }
 }

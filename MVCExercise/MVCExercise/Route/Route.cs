@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVCExercise.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -46,7 +47,17 @@ namespace MVCExercise.Route
             }
             for (int i = 0; i < strArray2.Length; i++)
             {
-
+                if (strArray2[i].StartsWith("{")&&strArray2[i].EndsWith("}"))
+                {
+                    variables.Add(strArray2[i].Trim("{}".ToCharArray()), strArray1[i]);
+                }
+                else
+                {
+                    if (string.Compare(strArray1[i],strArray2[i],true)!=0)
+                    {
+                        return false;
+                    }
+                }
             }
             return true;
          }

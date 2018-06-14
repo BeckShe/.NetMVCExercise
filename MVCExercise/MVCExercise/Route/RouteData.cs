@@ -16,7 +16,7 @@ namespace MVCExercise.Route
         {
             this.Values = new Dictionary<string, object>();
             this.DataTokens= new Dictionary<string, object>();
-            this.DataTokens.Add("namespaces", new List<string>);
+            this.DataTokens.Add("namespaces", new List<string>());
         }
        public string Controller
         {

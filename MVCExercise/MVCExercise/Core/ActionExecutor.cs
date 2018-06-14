@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Reflection;
 using System.Web;
 
@@ -24,11 +25,30 @@ namespace MVCExercise.Core
                 {
                     if (!executors.TryGetValue(this.MethodInfo,out executor))
                     {
-                        
+                        executor = CreateExecutor(this.MethodInfo);
+                        executors[this.MethodInfo] = executor;
                     }
                 }
             }
-
+            return executor(target, arguments);
+        }
+        private static Func<object,object[],object> CreateExecutor(MethodInfo methodInfo)
+        {
+            ParameterExpression target = Expression.Parameter(typeof(object), "target");
+            ParameterExpression arguments = Expression.Parameter(typeof(object[]), "arguments");
+            List<Expression> parameters = new List<Expression>();
+            ParameterInfo[] paramInfos = methodInfo.GetParameters();
+            for (int i = 0; i < paramInfos.Length; i++)
+            {
+                ParameterInfo paramInfo = paramInfos[i];
+                BinaryExpression getElementByIndex = Expression.ArrayIndex(arguments, Expression.Constant(i));
+                UnaryExpression convertToParameterType = Expression.Convert(getElementByIndex, paramInfo.ParameterType);
+                parameters.Add(convertToParameterType);
+            }
+            UnaryExpression instanceCast = Expression.Convert(target, methodInfo.ReflectedType);
+            MethodCallExpression methodCall = Expression.Call(instanceCast, methodInfo, parameters);
+            UnaryExpression convertToObjectType = Expression.Convert(methodCall, typeof(object));
+            return Expression.Lambda<Func<object, object[], object>>(convertToObjectType,target,arguments).Compile();
         }
     }
 }
