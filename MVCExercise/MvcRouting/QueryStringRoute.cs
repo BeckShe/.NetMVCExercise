@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Routing;
 
-namespace MvcWeb
+namespace MvcRouting
 {
     public class QueryStringRoute:RouteBase
     {
@@ -25,7 +24,7 @@ namespace MvcWeb
     {
         public IHttpHandler GetHttpHandler(RequestContext requestContext)
         {
-            return new MvcHandler(requestContext);
+            return null; //new MvcHandler(requestContext);
         }
     }
 }

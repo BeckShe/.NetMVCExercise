@@ -1,10 +1,7 @@
-﻿using MVCExercise.Route;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Web;
+using MVCExercise.Route;
 
-namespace MVCExercise.Core
+namespace MVCExercise.Handler
 {
     public class MvcRouteHandler : IRouteHandler
     {

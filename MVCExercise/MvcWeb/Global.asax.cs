@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
+using MvcRouting;
 
 namespace MvcWeb
 {
@@ -14,7 +15,7 @@ namespace MvcWeb
         {
             RouteTable.Routes.Add(new QueryStringRoute());
             RouteTable.Assemblies.Add("MvcWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-            RouteTable.Namespaces.Add("Artech.MvcWeb");
+            RouteTable.Namespaces.Add("MVCExercise.MvcWeb");
 
         }
 

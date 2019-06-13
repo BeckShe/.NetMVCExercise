@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
+﻿using System.Collections.ObjectModel;
 using System.Web;
 
-namespace MvcWeb
+namespace MvcRouting
 {
     public class RouteCollection:Collection<RouteBase>
     {

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCExercise", "MVCExercise\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcWeb", "MvcWeb\MvcWeb.csproj", "{F2231ED2-6878-48CD-A1D0-DEE79EC6647E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcRouting", "MvcRouting\MvcRouting.csproj", "{9134D9F2-4146-4415-ACF7-537D99466BBF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F2231ED2-6878-48CD-A1D0-DEE79EC6647E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2231ED2-6878-48CD-A1D0-DEE79EC6647E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2231ED2-6878-48CD-A1D0-DEE79EC6647E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9134D9F2-4146-4415-ACF7-537D99466BBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9134D9F2-4146-4415-ACF7-537D99466BBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9134D9F2-4146-4415-ACF7-537D99466BBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9134D9F2-4146-4415-ACF7-537D99466BBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
