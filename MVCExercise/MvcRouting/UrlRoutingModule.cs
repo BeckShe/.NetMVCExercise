@@ -4,6 +4,10 @@ namespace MvcRouting
 {
     public class UrlRoutingModule:IHttpModule
     {
+        public void Dispose()
+        {
+
+        }
         public void Init(HttpApplication context)
         {
             context.PostAcquireRequestState += (sender, args) =>
@@ -20,9 +24,6 @@ namespace MvcRouting
             };
         }
 
-        public void Dispose()
-        {
-   
-        }
+
     }
 }
