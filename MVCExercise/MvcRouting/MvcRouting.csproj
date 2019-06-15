@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionResult.cs" />
+    <Compile Include="ControllerContext.cs" />
     <Compile Include="DefaultController.cs" />
     <Compile Include="IController.cs" />
     <Compile Include="IControllerFactory.cs" />
@@ -52,6 +54,7 @@
     <Compile Include="RouteCollection.cs" />
     <Compile Include="RouteData.cs" />
     <Compile Include="RouteTable.cs" />
+    <Compile Include="StaticViewResult.cs" />
     <Compile Include="UrlRoutingModule.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

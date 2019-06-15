@@ -12,7 +12,12 @@ namespace MvcRouting
         {
             string action = requestContext.RouteData.Action;
             MethodInfo method = this.GetType().GetMethod(action);
-            
+            ActionResult result = (ActionResult)method.Invoke(this, null);
+            ControllerContext controllerContext = new ControllerContext
+            {
+                RequestContext=requestContext
+            };
+            result.ExectueResult(controllerContext);
         }
     }
 }
