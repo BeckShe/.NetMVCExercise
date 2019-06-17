@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using System.Web.Routing;
 
 namespace MvcRouting
@@ -9,7 +10,9 @@ namespace MvcRouting
 
         public string Action { get; set; }
 
-        public IList<string> Assemblies { get; set; }
+        public IList<string> Assemblies { get;private set; }
+
+        public IList<string> Namespaces { get; private set; }
 
         public IRouteHandler RouteHandler { get; set; }
 
