@@ -21,6 +21,8 @@ namespace MvcRouting
             this.Controller = controller;
             this.Action = action;
             this.RouteHandler = routeHandler;
+            this.Assemblies = RouteTable.Assemblies;
+            this.Namespaces = RouteTable.Namespaces;
         }
     }
 }

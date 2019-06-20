@@ -6,7 +6,7 @@ using MvcRouting;
 
 namespace MvcWeb
 {
-    public class HomeController
+    public class HomeController: DefaultController
     {
         public ActionResult Index()
         {

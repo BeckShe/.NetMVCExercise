@@ -24,7 +24,7 @@ namespace MvcRouting
     {
         public IHttpHandler GetHttpHandler(RequestContext requestContext)
         {
-            return null; //new MvcHandler(requestContext);
+            return new MvcHandler(requestContext);
         }
     }
 }

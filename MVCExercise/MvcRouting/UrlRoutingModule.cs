@@ -10,7 +10,7 @@ namespace MvcRouting
         }
         public void Init(HttpApplication context)
         {
-            context.PostAcquireRequestState += (sender, args) =>
+            context.PostResolveRequestCache += (sender, args) =>
             {
                 HttpContextWrapper contextWrapper=new HttpContextWrapper(context.Context);
                 HttpContextBase httpContext = (HttpContextBase) contextWrapper;

@@ -6,13 +6,17 @@ using System.Web;
 
 namespace MvcRouting
 {
-    public class MvcHandle : IHttpHandler
+    public class MvcHandler : IHttpHandler
     {
-        public RequestContext RequestContext { get; private set; }
+        public RequestContext RequestContext { get; }
+        public MvcHandler(RequestContext requestContext)
+        {
+            RequestContext = requestContext;
+        }
 
         public IControllerFactory ControllerFactory
         {
-            get { return null; }
+            get { return ControllerBuilder.Current.GetControllerFactory(); }
         }
 
         public bool IsReusable

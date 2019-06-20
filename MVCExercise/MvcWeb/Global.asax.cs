@@ -16,7 +16,6 @@ namespace MvcWeb
             RouteTable.Routes.Add(new QueryStringRoute());
             RouteTable.Assemblies.Add("MvcWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
             RouteTable.Namespaces.Add("MvcWeb");
-
         }
 
         protected void Session_Start(object sender, EventArgs e)
