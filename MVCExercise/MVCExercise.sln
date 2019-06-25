@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcWeb", "MvcWeb\MvcWeb.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcRouting", "MvcRouting\MvcRouting.csproj", "{9134D9F2-4146-4415-ACF7-537D99466BBF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMVC", "MiniMVC\MiniMVC.csproj", "{ED4F9EE7-6E1C-4B17-AAD9-EE5D68A6FF3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9134D9F2-4146-4415-ACF7-537D99466BBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9134D9F2-4146-4415-ACF7-537D99466BBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9134D9F2-4146-4415-ACF7-537D99466BBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED4F9EE7-6E1C-4B17-AAD9-EE5D68A6FF3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED4F9EE7-6E1C-4B17-AAD9-EE5D68A6FF3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED4F9EE7-6E1C-4B17-AAD9-EE5D68A6FF3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED4F9EE7-6E1C-4B17-AAD9-EE5D68A6FF3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
