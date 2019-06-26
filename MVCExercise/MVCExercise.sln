@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcRouting", "MvcRouting\Mv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMVC", "MiniMVC\MiniMVC.csproj", "{ED4F9EE7-6E1C-4B17-AAD9-EE5D68A6FF3E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcWeb2", "MvcWeb2\MvcWeb2.csproj", "{81BF11FD-DFB2-4129-9FB5-7A3F4571316D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{ED4F9EE7-6E1C-4B17-AAD9-EE5D68A6FF3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED4F9EE7-6E1C-4B17-AAD9-EE5D68A6FF3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED4F9EE7-6E1C-4B17-AAD9-EE5D68A6FF3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81BF11FD-DFB2-4129-9FB5-7A3F4571316D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81BF11FD-DFB2-4129-9FB5-7A3F4571316D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81BF11FD-DFB2-4129-9FB5-7A3F4571316D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81BF11FD-DFB2-4129-9FB5-7A3F4571316D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

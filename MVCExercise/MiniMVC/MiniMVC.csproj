@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControllerBuilder.cs" />
+    <Compile Include="DefaultControllerFactory.cs" />
     <Compile Include="IController.cs" />
     <Compile Include="IControllerFactory.cs" />
     <Compile Include="IRouteHandler.cs" />
