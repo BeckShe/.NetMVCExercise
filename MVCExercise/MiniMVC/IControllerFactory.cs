@@ -7,7 +7,7 @@ namespace MiniMVC
 {
     public interface IControllerFactory
     {
-        IControllerFactory GetControllerFactory();
+        ///IControllerFactory GetControllerFactory();
         /// <summary>
         /// 根据传入的请求上下文和Controller的名词来激活相应的Controller对象
         /// </summary>
