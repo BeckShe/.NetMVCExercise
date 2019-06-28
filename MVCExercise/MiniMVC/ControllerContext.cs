@@ -7,9 +7,13 @@ namespace MiniMVC
 {
     public class ControllerContext
     {
+        public ControllerBase Controller { get; set; }
+        public RequestContext RequestContext { get; set; }
         public ControllerContext(RequestContext RequestContext,ControllerBase Controller)
         {
             
+
         }
+
     }
 }

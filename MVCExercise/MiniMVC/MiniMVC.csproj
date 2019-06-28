@@ -40,14 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionResult.cs" />
     <Compile Include="ControllerActionInvoker.cs" />
     <Compile Include="ControllerBase.cs" />
     <Compile Include="ControllerBuilder.cs" />
     <Compile Include="ControllerContext.cs" />
     <Compile Include="DefaultControllerFactory.cs" />
+    <Compile Include="DefaultModelBinder.cs" />
     <Compile Include="IActionInvoker.cs" />
     <Compile Include="IController.cs" />
     <Compile Include="IControllerFactory.cs" />
+    <Compile Include="IModelBinder.cs" />
     <Compile Include="IRouteHandler.cs" />
     <Compile Include="MvcHandler.cs" />
     <Compile Include="MvcRouteHandler.cs" />
