@@ -5,11 +5,8 @@ using System.Text;
 
 namespace MiniMVC
 {
-    public class ActionResult
+    public abstract class ActionResult
     {
-        public void ExecuteResult(ControllerContext controllerContext)
-        {
-            
-        }
+        public abstract void ExecuteResult(ControllerContext controllerContext);
     }
 }

@@ -54,6 +54,7 @@
     <Compile Include="IRouteHandler.cs" />
     <Compile Include="MvcHandler.cs" />
     <Compile Include="MvcRouteHandler.cs" />
+    <Compile Include="RawContentResult.cs" />
     <Compile Include="RequestContext.cs" />
     <Compile Include="Route.cs" />
     <Compile Include="RouteBase.cs" />
