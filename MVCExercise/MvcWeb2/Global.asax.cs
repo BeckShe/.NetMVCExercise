@@ -13,8 +13,9 @@ namespace MvcWeb2
 
         protected void Application_Start(object sender, EventArgs e)
         {
+            RouteTable.Routes.Add("default",new Route {Url = "{controller}/{action}"});
             ControllerBuilder.Current.SetControllerFactory(new DefaultControllerFactory());
-            ControllerBuilder.Current.DefaultNamespaces.Add("MVCExercise");
+            ControllerBuilder.Current.DefaultNamespaces.Add("MvcWeb2");
         }
 
         protected void Session_Start(object sender, EventArgs e)

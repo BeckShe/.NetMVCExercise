@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using MiniMVC;
 
-namespace MvcWeb2.Controller
+namespace MvcWeb2
 {
     public class HomeController:ControllerBase
     {
