@@ -19,8 +19,7 @@ namespace MiniMVC
 
         public void Execute(RequestContext requestContext)
         {
-            ControllerContext context = new ControllerContext
-                (requestContext, this);
+            ControllerContext context = new ControllerContext {Controller = this, RequestContext = requestContext};
             string actionName = requestContext.RouteData.ActionName;
             this.ActionInvoker.InvokeAction(context,actionName);
         }
